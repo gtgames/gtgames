@@ -1,0 +1,28 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>GT Games</title>
+    <link>http://gtgames.it</link>
+    <language>it</language>
+    <webMaster>info@gtgames.it</webMaster>
+    <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+    <copyright>Copyright 2010-2011</copyright>
+    <ttl>60</ttl>
+    <description>Web design e software development</description>
+    {% for post in site.posts limit:10 %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>http://gtgames.it{{ post.url }}</link>
+      <pubDate>{{ post.date }}</pubDate>
+      <guid>http://gtgames.it/archives{{ post.id }}/</guid>
+      <description>{{ post.content | xml_escape }}</description>
+      {% for topic in post.topics %}
+      <category domain="http://gtgames.it/tags/{{ topic }}">{{ topic }}</category>
+      {% endfor %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
