@@ -13,23 +13,16 @@
 
 </head>
 <body>
-
-<div class="site">
   <div class="title">
     <a href="/">GTGames</a>
     <a class="extra" href="/">home</a>
   </div>
-
-  {{ content }}
-
-  <div class="footer">
+  <div class="site">
+    {{ content }}
+  </div>
+  <footer>
     <div class="contact">
-      <p>
-        Giuseppe Tazzi - GTGames.it<br />
-        info@gtgames.it
-      </p>
-    </div>
-    <div class="contact">
+      <p>Giuseppe Tazzi - GTGames.it<br /><a href="mailto:info@gtgames.it">info@gtgames.it</a></p>
       <p>
         <a href="http://github.com/gtgames/">github.com/gtgames</a><br />
         <a href="http://twitter.com/gtgames/">twitter.com/gtgames</a><br />
@@ -37,22 +30,22 @@
       </p>
     </div>
     <div class="rss">
+      <a href="/atom.xml">atom</a>
+      <a href="/rss.xml">rss</a>
     </div>
-  </div>
-</div>
+  </footer>
 
-<!-- Analyst -->
-<script type="text/javascript">
-  (function(w,d) {
-    w._analyst = '';
-    var t = d.createElement('script'),
-        s = d.getElementsByTagName('script')[0];
-    t.type='text/javascript';t.async=true;t.id='analyst-tracker';
-    t.src = 'http://analyst.machete.it/al.js';
-    s.parentNode.insertBefore(t, s);
-  })(window,document);
-</script>
-<!-- Analyst end -->
-
+  <!-- Analyst -->
+  <script type="text/javascript">
+    (function(w,d) {
+      w._analyst = '';
+      var t = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+      t.type='text/javascript';t.async=true;t.id='analyst-tracker';
+      t.src = 'http://analyst.machete.it/al.js';
+      s.parentNode.insertBefore(t, s);
+    })(window,document);
+  </script>
+  <!-- Analyst end -->
 </body>
 </html>
